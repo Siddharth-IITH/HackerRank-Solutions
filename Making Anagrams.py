@@ -1,3 +1,12 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the makeAnagram function below.
 def makeAnagram(a, b):
     dicti={}
     count=0
@@ -15,3 +24,17 @@ def makeAnagram(a, b):
         if dicti[k]!=0:
             count+=abs(dicti[k])
     return count
+
+    
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    a = input()
+
+    b = input()
+
+    res = makeAnagram(a, b)
+
+    fptr.write(str(res) + '\n')
+
+    fptr.close()
