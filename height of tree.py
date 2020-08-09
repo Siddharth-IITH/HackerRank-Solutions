@@ -59,3 +59,14 @@ def height(root):
 
     return  max(lH,rH)+1
     
+
+
+tree = BinarySearchTree()
+t = int(input())
+
+arr = list(map(int, input().split()))
+
+for i in range(t):
+    tree.create(arr[i])
+
+print(height(tree.root))
